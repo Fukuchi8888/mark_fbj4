@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mark_fbj4">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00238348665372786 -0.125000000553057 0.0212109386462722"
+        rpy="0 0 0" />
+      <mass
+        value="0.884228515493409" />
+      <inertia
+        ixx="0.00144829165350996"
+        ixy="1.60519492993308E-10"
+        ixz="3.5912954700143E-05"
+        iyy="0.0011482128838577"
+        iyz="1.93591518860625E-11"
+        izz="0.00203715547793105" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mark_fbj4/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mark_fbj4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 1.73472347597681E-18 -0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.0999654782372272" />
+      <inertia
+        ixx="4.35432962288322E-05"
+        ixy="-2.6386211656956E-37"
+        ixz="-4.41162993361574E-24"
+        iyy="4.35432962288322E-05"
+        iyz="-4.59177480789955E-38"
+        izz="8.04222272418493E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mark_fbj4/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mark_fbj4/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.023709 -0.055 0.01262"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 1.73472347597681E-18 0.00999999999999995"
+        rpy="0 0 0" />
+      <mass
+        value="0.0999654782372272" />
+      <inertia
+        ixx="4.35432962288322E-05"
+        ixy="-2.6386211656956E-37"
+        ixz="5.60277001569247E-22"
+        iyy="4.35432962288322E-05"
+        iyz="-9.18354961579919E-38"
+        izz="8.04222272418493E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mark_fbj4/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mark_fbj4/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.023709 -0.195 0.01262"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="sensor_link">
+    <inertial>
+      <origin
+        xyz="0.034608 -0.040588 0.017736"
+        rpy="0 0 0" />
+      <mass
+        value="0.077493" />
+      <inertia
+        ixx="4.1051E-05"
+        ixy="-6.7763E-21"
+        ixz="7.9302E-21"
+        iyy="4.1051E-05"
+        iyz="1.8696E-19"
+        izz="6.5429E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mark_fbj4/meshes/sensor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mark_fbj4/meshes/sensor_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sensor_link_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.033879 -0.078327 0.052577"
+      rpy="0.00046163 -0.0042301 -0.1087" />
+    <parent
+      link="base_link" />
+    <child
+      link="sensor_link" />
+    <axis
+      xyz="0.10849 -0.9941 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="0.0275 -0.025999 -0.00022127"
+        rpy="0 0 0" />
+      <mass
+        value="0.0062137" />
+      <inertia
+        ixx="1.4302E-07"
+        ixy="-1.596E-23"
+        ixz="2.541E-22"
+        iyy="1.5152E-06"
+        iyz="6.5306E-10"
+        izz="1.4385E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mark_fbj4/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mark_fbj4/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_link_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.088751 -0.095601 0.022343"
+      rpy="3.1373 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
